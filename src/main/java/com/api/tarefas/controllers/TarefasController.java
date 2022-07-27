@@ -1,4 +1,4 @@
-package com.api.tarefas.application;
+package com.api.tarefas.controllers;
 
 import java.util.List;
 
@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.tarefas.dominio.Tarefa;
-import com.api.tarefas.infraestrutura.RepositorioTarefas;
+import com.api.tarefas.repositories.RepositorioTarefas;
 
 @RestController
 public class TarefasController {
     
     private RepositorioTarefas repositorioTarefas;
 
-    public TarefasController() {
-        repositorioTarefas = new RepositorioTarefas();
+    public TarefasController(RepositorioTarefas repositorioTarefas) {
+    	this.repositorioTarefas = repositorioTarefas;
     }
 
     @GetMapping("/tarefas/{id}")

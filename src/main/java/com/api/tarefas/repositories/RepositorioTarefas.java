@@ -1,4 +1,4 @@
-package com.api.tarefas.infraestrutura;
+package com.api.tarefas.repositories;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,8 +24,12 @@ public class RepositorioTarefas {
 
 
     public List<Tarefa> adicionarTarefa(Tarefa tarefa) {
-        tarefas.add(tarefa);
-        return tarefas;
+    	if (tarefa != null) {
+    		tarefas.add(tarefa);
+    		return tarefas;
+    	} else {
+    		throw new NullPointerException();
+    	}
     }
 
     public void excluirTarefa(int id) {
