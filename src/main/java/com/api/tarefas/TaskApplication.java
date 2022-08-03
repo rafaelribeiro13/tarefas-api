@@ -1,13 +1,13 @@
-package com.api.tarefas.application;
+package com.api.tarefas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TarefasApplication {
+public class TaskApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TarefasApplication.class, args);
+		SpringApplication.run(TaskApplication.class, args);
 	}
 
 }
